@@ -1,0 +1,29 @@
+@import './variables';
+.navbar{
+    flex-direction: column;
+}
+
+.navbar-nav{
+    flex-direction: column;
+    .nav-link{
+        padding: 13px 15px;
+    }
+}
+.nav-link{
+    cursor: pointer;
+    user-select: none;
+}
+.nav-item {
+    width: 100% !important;
+    margin: 10px 0;
+    border-radius: 2px;
+    &.active{
+        background-color: $secondary;
+       >.nav-link{
+           color: $primary !important;
+          
+       }
+    } .fa{
+        color: $text-primary !important;
+       }
+}

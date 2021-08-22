@@ -1,0 +1,27 @@
+<div class="position-absolute vh-100">
+    <button class="navbar-toggler" [class]="{'d-none':!breakpoint}" (click)="isNavbarClose=!isNavbarClose">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <nav class="navbar bg-light vh-100" [class]="{'d-none':isNavbarClose}">
+
+        <div class="flex-column w-100 position-relative" id="navbarSupportedContent">
+            <!-- <button class="navbar-toggler" [class]="{'d-none':isNavbarClose}" (click)="isNavbarClose=!isNavbarClose">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button> -->
+            <span class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Larsen%26Toubro_logo.svg/1200px-Larsen%26Toubro_logo.svg.png"
+                    width="30" height="30" alt="">
+            </span>
+            <ul class="navbar-nav mr-auto">
+                <li *ngFor="let navItem of navigationItems" class="nav-item"
+                    [ngClass]="{'active': navItem.path === currentRoute}">
+                    <span class="nav-link" [routerLink]="[navItem.path]">
+                        <i [class]="'fa fa-'+navItem.icon+' pr-2'"></i>
+
+                        {{navItem.name}}
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

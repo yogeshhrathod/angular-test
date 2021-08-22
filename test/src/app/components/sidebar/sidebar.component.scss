@@ -1,0 +1,22 @@
+.navbar-brand{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navbar{
+        min-width:220px;
+}
+
+.navbar-toggler{
+    position: absolute;
+    z-index: 2;
+    
+    top: 10px;
+    left: 10px;
+}
+@media(max-width: 800px) {
+    .navbar{
+        box-shadow: 2px 2px 20px grey;
+}
+
+}
