@@ -57,3 +57,53 @@ $theme-colors: (
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Bootstrap dialogue cutom styles
+
+.modal-dialog{
+  margin: 0px;
+  height: 100vh !important;
+  float: right;
+  width: inherit;
+  .modal-content{
+    height: 100%;
+    animation-name: right-to-left;
+    animation-duration: 0.3s;
+  }
+  }
+
+
+.modal-backdrop {
+  transition: opacity .05s linear;
+}
+
+.modal.fade.show .modal-content {
+  animation-name: anim-open;
+  animation-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+.modal.fade .modal-content {
+  animation-name: anim-close;
+}
+
+@keyframes anim-open{
+  0% {
+    opacity: 0;
+    transform: translate(100%,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+@keyframes anim-close {
+  0% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100%,0);
+  }
+}
