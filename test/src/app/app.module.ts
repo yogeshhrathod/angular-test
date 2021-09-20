@@ -7,13 +7,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PepleComponent } from './components/peple/peple.component';
+import { LoginComponent } from './components/login/login.component';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     DashboardComponent,
-    PepleComponent
+    PepleComponent,
+    LoginComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

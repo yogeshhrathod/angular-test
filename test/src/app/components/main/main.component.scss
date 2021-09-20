@@ -1,0 +1,27 @@
+@import '../../../scss/variables';
+.root{
+    width: 100%;
+    display: inline-flex;
+    height: 100vh;
+}
+// .navbar-container{
+//     min-width:220px;
+// }
+.main-container{
+    width: 100%;
+    background-color: $secondary;
+    
+}
+@media(min-width: 800px) {
+    .main-container{
+        margin-left: 220px;
+        
+    }
+
+}
+@media(max-width: 800px) {
+    .main-container{
+        padding-top: 30px;
+    }
+
+}
